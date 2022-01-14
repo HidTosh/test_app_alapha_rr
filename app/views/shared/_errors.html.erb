@@ -1,0 +1,11 @@
+<% if @article.errors.any? %>
+
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">The folowwing errors prevented being saved</h4>
+  <ul>
+    <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+    <% end %>
+    </ul>
+</div>
+<% end %>
