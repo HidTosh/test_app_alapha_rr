@@ -16,7 +16,7 @@
             <%= f.text_field :password, class: "form-control" %>
         </div>
         <div class="col-auto">
-            <%= f.submit class: "btn btn-primary mb-3" %>
+            <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-primary mb-3") %>
         </div>
     <% end %>
 </div>
