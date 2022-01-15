@@ -1,0 +1,22 @@
+<div class="container" id="containter-home">
+
+    <%= render 'shared/errors', obj: @user %>
+    <%= form_with(model: @user, data: { turbo: false }, local: true) do |f| %>
+
+        <div class="mb-3">
+            <%= f.label :username, class: "form-label" %>
+            <%= f.text_field :username, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+            <%= f.label :email, class: "form-label" %>
+            <%= f.text_field :email, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+            <%= f.label :password, class: "form-label" %>
+            <%= f.text_field :password, class: "form-control" %>
+        </div>
+        <div class="col-auto">
+            <%= f.submit class: "btn btn-primary mb-3" %>
+        </div>
+    <% end %>
+</div>

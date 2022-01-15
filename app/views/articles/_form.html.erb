@@ -1,6 +1,6 @@
 <div class="container" id="containter-home">
 
-    <%= render 'shared/errors' %>
+    <%= render 'shared/errors', obj: @article %>
     <%= form_with(model: @article, data: { turbo: false }, local: true) do |f| %>
 
         <div class="mb-3">

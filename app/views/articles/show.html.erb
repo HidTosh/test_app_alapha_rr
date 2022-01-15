@@ -2,7 +2,7 @@
 <div class="container text-center">
     <div class="card mt-4">
         <div class="card-header">
-            By Hidtosh
+            <%= @article.user.username if @article.user %>
             <small>Created at <%= time_ago_in_words(@article.created_at)%> ago </small>
             <small>Updated at <%= time_ago_in_words(@article.updated_at)%> ago </small>
         </div>

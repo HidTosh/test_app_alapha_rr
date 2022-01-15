@@ -1,9 +1,9 @@
-<% if @article.errors.any? %>
+<% if obj.errors.any? %>
 
 <div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">The folowwing errors prevented being saved</h4>
+  <h4 class="alert-heading">The folowwing errors prevented being saved <%= obj.class.name.downcase %> </h4>
   <ul>
-    <% @article.errors.full_messages.each do |msg| %>
+    <% obj.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
     <% end %>
     </ul>
